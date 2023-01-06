@@ -95,6 +95,7 @@ class Color(Flattenable):
     """
     Class that represents a color.
     """
+
     r: int
     g: int
     b: int
@@ -118,6 +119,26 @@ class Color(Flattenable):
             "color": self.hex()
         }
 
+    # Static elements to get color objects for common colors
+    @staticmethod
+    def red() -> "Color":
+        """Return a color object for red."""
+        return Color(255, 0, 0)
+
+    @staticmethod
+    def green() -> "Color":
+        """Return a color object for green."""
+        return Color(0, 255, 0)
+
+    @staticmethod
+    def blue() -> "Color":
+        """Return a color object for blue."""
+        return Color(0, 0, 255)
+
+    @staticmethod
+    def white() -> "Color":
+        """Return a color object for white."""
+        return Color(255, 255, 255)
 
 class Location(Flattenable):
     """
